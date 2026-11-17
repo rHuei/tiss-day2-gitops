@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: platform-fg01
+  namespace: argocd
+spec:
+  project: fg01
+  source:
+    repoURL: https://github.com/rHuei/tiss-day2-gitops.git
+    targetRevision: main
+    path: platform
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: fg01
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
