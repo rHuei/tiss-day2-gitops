@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-deployment
+  name: hello-argocd-deployment
 spec:
   replicas: 3
   strategy:
@@ -15,11 +15,13 @@ spec:
     matchLabels:
       app: hello
       run: deployment
+      deploy: argocd
   template:
     metadata:
       labels:
         app: hello
         run: deployment
+        deploy: argocd
     spec:
       containers:
       - name: hello

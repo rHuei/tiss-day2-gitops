@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-service
+  name: hello-argocd-service
 spec:
   selector:
     app: hello
     run: deployment
+    deploy: argocd
   ports:
   - protocol: TCP
     port: 4000

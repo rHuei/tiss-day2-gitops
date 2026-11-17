@@ -1,14 +1,14 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: hello-route
+  name: hello-argocd-route
 spec:
   parentRefs:
   - name: apps-gw
     namespace: apps-gateway
     sectionName: https
   hostnames:
-  - hello-fg01.apps.k8s.tiss.internal
+  - hello-argocd.apps.k8s.tiss.internal
   rules:
   - matches:
     - path:
