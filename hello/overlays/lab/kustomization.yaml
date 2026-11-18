@@ -7,7 +7,7 @@ resources:
 images:
 - name: hello
   newName: ghcr.io/rhuei/hello      # GHCR 路徑必須全小寫
-  newTag: e03d513                    # GitHub Actions 每次 build 後會改成 commit 前 7 碼
+  newTag: v6                    # GitHub Actions 每次 build 後會改成 commit 前 7 碼
 configMapGenerator:
 - name: hello-env
   literals:
