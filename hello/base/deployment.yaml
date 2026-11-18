@@ -42,10 +42,3 @@ spec:
         resources:
           requests: {cpu: 100m, memory: 64Mi}
           limits:   {cpu: 500m, memory: 128Mi}
-        volumeMounts:
-        - name: data
-          mountPath: /data
-      volumes:
-      - name: data
-        persistentVolumeClaim:
-          claimName: hello-data
